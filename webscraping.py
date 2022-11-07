@@ -13,7 +13,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 links = soup.find_all('a')
 
-pdfs = sorted(glob("./*.pdf"))
+
 
 i = 0 
 
@@ -32,6 +32,8 @@ for link in links:
 print("Todos os PDFS foram baixados")
 
 print("Compactando arquivos em ZipFile...")
+
+pdfs = sorted(glob("./*.pdf"))
 
 i = 0
 with ZipFile("anexos_compactados.zip", "w") as zip:
