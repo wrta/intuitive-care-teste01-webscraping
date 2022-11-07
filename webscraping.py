@@ -18,7 +18,7 @@ pdfs = sorted(glob("./*.pdf"))
 i = 0 
 
 for link in links:
-    if('.pdf'  in link.get('href', [])):
+    if('.pdf' and 'Anexo' in link.get('href', [])):
         i += 1
         print("Downloading file: ", i)
 
